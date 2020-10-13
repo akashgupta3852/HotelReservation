@@ -13,9 +13,8 @@ public class HotelReservationTest {
 		hotelReservation.addHotelToHotelReservation(firstHotel);
 		hotelReservation.addHotelToHotelReservation(secondHotel);
 		hotelReservation.addHotelToHotelReservation(thirdHotel);
-		System.out.println(hotelReservation.findMinimumPrice());
-		String hotelName = hotelReservation.findTheCheapestBestRatedHotel();
+		String hotelName = hotelReservation.findBestRatedHotel();
 		System.out.println(hotelName);
-		Assert.assertEquals("Bridgewood", hotelName);
+		Assert.assertEquals("Ridgewood", hotelName);
 	}
 }

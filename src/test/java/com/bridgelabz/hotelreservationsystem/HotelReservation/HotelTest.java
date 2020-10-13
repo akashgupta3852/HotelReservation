@@ -24,5 +24,4 @@ public class HotelTest {
 		boolean result = (hotel.getRate() == 220);
 		Assert.assertTrue(result);
 	}
-
 }

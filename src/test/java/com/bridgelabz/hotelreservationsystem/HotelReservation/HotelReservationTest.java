@@ -104,7 +104,7 @@ public class HotelReservationTest {
 			Assert.assertEquals("Data can't be null", e.getMessage());
 		}
 	}
-	
+
 	@Test
 	public void givenEndDate_WhenValid_ShouldReturnTrue() throws CustomerDetailsException {
 		HotelReservation hotelReservation = new HotelReservation("Reward", "11Sep2020", "12Sep2025");
@@ -156,11 +156,12 @@ public class HotelReservationTest {
 		hotelReservation.addHotelToHotelReservation(secondHotel);
 		hotelReservation.addHotelToHotelReservation(thirdHotel);
 		String hotelName = hotelReservation.findTheCheapestHotel();
-		Assert.assertEquals("Lakewood Bridgewood ", hotelName);
+		Assert.assertEquals("Lakewood, Bridgewood", hotelName);
 	}
 
 	@Test
-	public void givenHotels_WhenAddedForRegularCustomer_ShouldReturnTheCheapestBestRatedHotel() throws CustomerDetailsException {
+	public void givenHotels_WhenAddedForRegularCustomer_ShouldReturnTheCheapestBestRatedHotel()
+			throws CustomerDetailsException {
 		HotelReservation hotelReservation = new HotelReservation("Regular", "11Sep2020", "12Sep2020");
 		hotelReservation.addHotelToHotelReservation(firstHotel);
 		hotelReservation.addHotelToHotelReservation(secondHotel);
@@ -180,7 +181,8 @@ public class HotelReservationTest {
 	}
 
 	@Test
-	public void givenHotels_WhenAddedForRewardCustomer_ShouldReturnTheCheapestBestRatedHotel() throws CustomerDetailsException {
+	public void givenHotels_WhenAddedForRewardCustomer_ShouldReturnTheCheapestBestRatedHotel()
+			throws CustomerDetailsException {
 		HotelReservation hotelReservation = new HotelReservation("Reward", "11Sep2020", "12Sep2020");
 		hotelReservation.addHotelToHotelReservation(firstHotel);
 		hotelReservation.addHotelToHotelReservation(secondHotel);
